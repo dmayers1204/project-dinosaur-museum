@@ -16,13 +16,24 @@ const exampleDinosaurData = require("../data/dinosaurs");
  * NOTE: To convert from meters to feet, multiply the meters by `3.281`.
  *
  * @param {Object[]} dinosaurs - An array of dinosaur objects. See the `data/dinosaurs.js` file for an example of the input.
+ * 
  * @returns {Object} An object where the key is the name of the dinosaur and the value is the height of the dinosaur in feet.
  *
  * EXAMPLE:
  *  getLongestDinosaur(dinosaurs);
  *  //> { Brachiosaurus: 98.43 }
  */
-function getLongestDinosaur(dinosaurs) {}
+function getLongestDinosaur(dinosaurs) {
+  let dinoLength = dinosaurs[0].lengthInMeters;
+  for(let i = 0; i < dinosaurs.length; i++){
+ if(dinosaurs[i].lengthInMeters > dinoLength){
+  dinoLength = dinosaurs[i];
+  return {[dinoLength.name] : [dinoLength.lengthInMeters] }
+   }
+  }
+}
+
+
 
 /**
  * getDinosaurDescription()
