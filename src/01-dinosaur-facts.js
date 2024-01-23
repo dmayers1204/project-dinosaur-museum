@@ -30,7 +30,7 @@ function getLongestDinosaur(dinosaurs) {
   dinoLength = dinosaurs[i];
     }
    }
-   return {[dinoLength.name] : [dinoLength.lengthInMeters] }
+   return {[dinoLength.name] : [dinoLength.lengthInMeters]* 3.281}
  }
   
 
@@ -57,6 +57,7 @@ function getLongestDinosaur(dinosaurs) {
  *  //> "A dinosaur with an ID of 'incorrect-id' cannot be found."
  */
 function getDinosaurDescription(dinosaurs, id) {}
+
 
 
 
